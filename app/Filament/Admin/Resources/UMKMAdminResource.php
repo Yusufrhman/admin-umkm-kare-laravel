@@ -66,6 +66,7 @@ class UMKMAdminResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->emptyStateHeading('Belum ada UMKM')
             ->columns([
                 Tables\Columns\TextColumn::make('umkm_name')
                     ->label("Nama UMKM")

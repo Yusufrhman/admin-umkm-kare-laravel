@@ -38,6 +38,7 @@ class UMKMResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
+
             ->schema([
                 Forms\Components\TextInput::make('umkm_name')
                     ->label("Nama UMKM")
@@ -65,6 +66,7 @@ class UMKMResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->emptyStateHeading('Belum ada UMKM')
             ->columns([
                 Tables\Columns\TextColumn::make('umkm_name')
                     ->label("Nama UMKM")

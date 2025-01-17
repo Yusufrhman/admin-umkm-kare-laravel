@@ -17,21 +17,5 @@ class UserSeeder extends Seeder
             'no_telp' => '081234567890',
             'role_id' => 1,
         ]);
-
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@madukare.com',
-            'password' => Hash::make('aaaaaa'),
-            'no_telp' => '081234567891',
-            'role_id' => 1,
-        ]);
-
-        User::create([
-            'name' => 'Regular User',
-            'email' => 'user@madukare.com',
-            'password' => Hash::make('aaaaaa'),
-            'no_telp' => '081234567892',
-            'role_id' => 1,
-        ]);
     }
 }

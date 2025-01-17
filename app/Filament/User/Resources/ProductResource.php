@@ -102,6 +102,7 @@ class ProductResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->emptyStateHeading('Belum ada Produk')
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
@@ -110,7 +111,6 @@ class ProductResource extends Resource
                     ->numeric()
                     ->prefix("Rp. ")
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('main_image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

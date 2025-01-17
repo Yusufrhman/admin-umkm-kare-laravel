@@ -111,6 +111,7 @@ class UserAdminResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->emptyStateHeading('Belum ada Pengguna')
             ->modifyQueryUsing(function (Builder $query) {
                 $userRoleId = auth()->user()->role_id;
 
